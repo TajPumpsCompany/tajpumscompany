@@ -21,6 +21,7 @@ const Products = () => {
             <Typography
               fontSize={"28px"}
               fontWeight={600}
+              fontFamily={"var(--fira_sans)"}
               sx={{ marginBottom: "10px", color: "red" }}
             >
               Products:
@@ -38,10 +39,19 @@ const Products = () => {
                     image={item.img}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      fontFamily={"var(--fira_sans)"}
+                    >
                       {item.name}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      fontFamily={"var(--work-sans)"}
+                    >
                       {item.des}
                     </Typography>
                   </CardContent>

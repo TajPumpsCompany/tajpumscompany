@@ -14,6 +14,7 @@ const ProductGallery = () => {
             <Typography
               fontSize={"28px"}
               fontWeight={600}
+              fontFamily={"var(--fira_sans)"}
               sx={{ marginBottom: "10px", color: "red" }}
             >
               Our Product Gallery:

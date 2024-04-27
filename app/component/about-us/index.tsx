@@ -14,11 +14,12 @@ const AboutUs = () => {
             <Typography
               fontSize={"28px"}
               fontWeight={600}
+              fontFamily={"var(--fira_sans)"}
               sx={{ marginBottom: "10px", color: "red" }}
             >
               About Us:
             </Typography>
-            <Typography>
+            <Typography fontFamily={"var(--work-sans)"}>
               TAJ PUMPS COMPANY has established its mark for about 35 years and
               counting and has proven its success by manufacturing and suppling
               quality products Nationwide. The products include manufacturing
@@ -29,7 +30,10 @@ const AboutUs = () => {
               Panels and SOLAR based systems.
             </Typography>
             <Box sx={styles.Quote}>
-              <Typography sx={{ marginLeft: "20px" }}>
+              <Typography
+                fontFamily={"var(--fira_sans)"}
+                sx={{ marginLeft: "20px" }}
+              >
                 <span
                   style={{
                     fontSize: "20px",

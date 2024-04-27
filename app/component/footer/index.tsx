@@ -31,7 +31,9 @@ const Footer = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={10} sx={styles.FollowUs}>
-            <Typography sx={{ color: "red" }}>Follow Us:</Typography>
+            <Typography fontFamily={"var(--fira_sans)"} sx={{ color: "red" }}>
+              Follow Us:
+            </Typography>
             {SocialIcons.map((item: any, index: any) => {
               return (
                 <Box sx={{ marginLeft: "10px" }} key={`${item?.id}-${index}`}>
@@ -54,14 +56,16 @@ const Footer = () => {
                     >
                       <TajImage src={item.logo} alt={item.name} />
                     </Box>
-                    <Typography>{item.name}</Typography>
+                    <Typography fontFamily={"var(--work-sans)"}>
+                      {item.name}
+                    </Typography>
                   </Link>
                 </Box>
               );
             })}
           </Grid>
           <Grid item xs={12}>
-            <Typography sx={{ color: "red" }}>
+            <Typography fontFamily={"var(--fira_sans)"} sx={{ color: "red" }}>
               {"We're located here:"}
             </Typography>
             <Link
@@ -72,7 +76,11 @@ const Footer = () => {
                 textDecoration: "none",
               }}
             >
-              <Typography fontSize={"12px"} sx={{ marginBottom: "10px" }}>
+              <Typography
+                fontSize={"12px"}
+                fontFamily={"var(--work-sans)"}
+                sx={{ marginBottom: "10px" }}
+              >
                 https://maps.app.goo.gl/YjwBtBdW4gZojfeA9
               </Typography>
             </Link>
@@ -87,7 +95,7 @@ const Footer = () => {
           </Grid>
           <Grid container item xs={12}>
             <Grid item xs={12}>
-              <Typography sx={{ color: "red" }}>
+              <Typography fontFamily={"var(--fira_sans)"} sx={{ color: "red" }}>
                 Get In Touch With Us:
               </Typography>
             </Grid>
@@ -107,14 +115,16 @@ const Footer = () => {
                       color: "white",
                     }}
                   >
-                    <Typography>{item.number}</Typography>
+                    <Typography fontFamily={"var(--work-sans)"}>
+                      {item.number}
+                    </Typography>
                   </Link>
                 </Grid>
               );
             })}
           </Grid>
           <Grid item xs={12} sx={styles.Rights}>
-            <Typography fontSize={"12px"}>
+            <Typography fontSize={"12px"} fontFamily={"var(--work-sans)"}>
               <span style={{ color: "red" }}>©</span> Copyright owned by Taj
               Pumps Company 2024
             </Typography>

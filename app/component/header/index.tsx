@@ -8,6 +8,7 @@ import {
   Toolbar,
   Typography,
   useMediaQuery,
+  useScrollTrigger,
   useTheme,
 } from "@mui/material";
 import React from "react";
@@ -20,9 +21,19 @@ import HeaderLogo from "@/public/Logo.png";
 const Header = () => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-
+  const ChangeNavBarColor = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 10,
+  });
   return (
-    <AppBar elevation={0} sx={{ backgroundColor: "black" }}>
+    <AppBar
+      elevation={0}
+      sx={{
+        background: ChangeNavBarColor ? "black" : "transparent",
+        color: ChangeNavBarColor ? "white" : "black",
+        transition: "background-color 0.5s, color 0.5s, backdrop-filter 0.5s",
+      }}
+    >
       <Toolbar>
         <Container>
           <Grid container sx={styles.MainGrid}>
@@ -36,7 +47,9 @@ const Header = () => {
               </Box>
             </Grid>
             {isMatch ? (
-              <ResponsiveHeader />
+              <ResponsiveHeader
+                drawarColor={ChangeNavBarColor ? "white" : "black"}
+              />
             ) : (
               <Grid item xs={10} sm={11} sx={styles.HeaderList}>
                 {HeaderData.map((item: any, index: any) => {

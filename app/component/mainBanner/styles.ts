@@ -1,9 +1,9 @@
 export const styles = {
   Box: {
     display: "flex",
-    padding: "64px 0px",
+    padding: "100px 0px",
     alignItems: "center",
-    backgroundColor: "#ececec",
+    // backgroundColor: "#ececec",
   },
   MainGrid: {
     display: "flex",
@@ -15,7 +15,6 @@ export const styles = {
     lineHeight: { xs: "56px", sm: "66px" },
     fontWeight: 600,
     color: "red",
-    fontStyle: "italic",
   },
   BannerPara: { fontSize: "16px", color: "black" },
   MainGridSec2: {

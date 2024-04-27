@@ -8,8 +8,11 @@ import { HeaderData } from "@/app/static-data/data";
 import TajImage from "../TajImage";
 import { Link as ScrollLink } from "react-scroll";
 import HeaderLogo from "@/public/Logo.png";
+interface Props {
+  drawarColor?: any;
+}
 
-const ResponsiveHeader = () => {
+const ResponsiveHeader = ({ drawarColor }: Props) => {
   const [opendrawer, setOpenDrawar] = useState(false);
   const onClickDrawer = () => {
     setOpenDrawar(true);
@@ -19,7 +22,7 @@ const ResponsiveHeader = () => {
   };
   return (
     <Box>
-      <MenuIcon onClick={onClickDrawer} sx={{ color: "white" }} />
+      <MenuIcon onClick={onClickDrawer} sx={{ color: drawarColor }} />
       <Drawer
         anchor="right"
         open={opendrawer}

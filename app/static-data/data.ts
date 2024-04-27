@@ -115,3 +115,9 @@ export const ProductImage = [
   { img: "/45.webp" },
   { img: "/48.webp" },
 ];
+export const Banner_Images = [
+  { name: "", img: "/Banner1.jpeg" },
+  { name: "", img: "/Banner2.jpeg" },
+  { name: "", img: "/Banner3.jpeg" },
+  { name: "", img: "/Banner4.jpeg" },
+];

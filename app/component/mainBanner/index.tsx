@@ -7,7 +7,7 @@ import BannerImage from "@/public/Banner1.jpeg";
 
 const MainBanner = () => {
   return (
-    <Box sx={styles.Box}>
+    <Box sx={styles.Box} id="banner">
       <Container>
         <Grid container sx={styles.MainGrid}>
           <Grid container item xs={12} md={5.9}>

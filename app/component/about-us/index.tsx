@@ -7,8 +7,8 @@ import CEOImage from "@/public/CEO.png";
 
 const AboutUs = () => {
   return (
-    <Box sx={styles.MainBox}>
-      <Container id="about-us">
+    <Box sx={styles.MainBox} id="about-us">
+      <Container>
         <Grid container sx={styles.MainGrid}>
           <Grid item xs={12} md={6}>
             <Typography

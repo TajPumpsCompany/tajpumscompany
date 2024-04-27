@@ -7,8 +7,8 @@ import CEOImage from "@/public/CEO.png";
 
 const AboutUs = () => {
   return (
-    <Container id="about-us">
-      <Box sx={styles.MainBox}>
+    <Box sx={styles.MainBox}>
+      <Container id="about-us">
         <Grid container sx={styles.MainGrid}>
           <Grid item xs={12} md={6}>
             <Typography
@@ -60,13 +60,13 @@ const AboutUs = () => {
                 style={{ objectFit: "contain" }}
               />
             </Box>
-            <Typography>
+            <Typography fontWeight={600} fontStyle={"italic"}>
               <span style={{ color: "red" }}>C.E.O:</span> MR. Azhar Ali
             </Typography>
           </Grid>
         </Grid>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

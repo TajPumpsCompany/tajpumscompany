@@ -1,6 +1,7 @@
 export const styles = {
   MainBox: {
-    margin: "50px 0px",
+    padding: "50px 0px",
+    backgroundColor: "#ececec",
   },
   MainGrid: {
     display: "flex",

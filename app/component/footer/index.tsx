@@ -72,7 +72,7 @@ const Footer = () => {
                 textDecoration: "none",
               }}
             >
-              <Typography sx={{ marginBottom: "10px" }}>
+              <Typography fontSize={"12px"} sx={{ marginBottom: "10px" }}>
                 https://maps.app.goo.gl/YjwBtBdW4gZojfeA9
               </Typography>
             </Link>

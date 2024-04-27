@@ -14,8 +14,8 @@ import { Product_data } from "@/app/static-data/data";
 
 const Products = () => {
   return (
-    <Container id="products">
-      <Box sx={styles.MainBox}>
+    <Box sx={styles.MainBox}>
+      <Container id="products">
         <Grid container gap={2} sx={styles.MainGrid}>
           <Grid item xs={12}>
             <Typography
@@ -50,8 +50,8 @@ const Products = () => {
             );
           })}
         </Grid>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

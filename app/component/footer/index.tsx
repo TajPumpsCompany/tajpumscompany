@@ -1,9 +1,12 @@
+"use client";
 import { FooterNumber, SocialIcons } from "@/app/static-data/data";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import TajImage from "../TajImage";
 import { styles } from "./styles";
+import HeaderLogo from "@/public/Logo.png";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -11,12 +14,20 @@ const Footer = () => {
       <Container>
         <Grid container rowGap={1} sx={styles.MainGrid}>
           <Grid item xs={12} sm={2} lg={1}>
-            <Box sx={{ height: 65, width: 85 }}>
-              <TajImage
-                src={""}
-                alt="footer Icons"
-                style={{ objectFit: "contain" }}
-              />
+            <Box sx={{ height: 75, width: 75 }}>
+              <ScrollLink
+                to={"banner"}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <TajImage
+                  src={HeaderLogo}
+                  alt="footer Icons"
+                  style={{ objectFit: "contain", cursor: "pointer" }}
+                />
+              </ScrollLink>
             </Box>
           </Grid>
           <Grid item xs={12} sm={10} sx={styles.FollowUs}>
@@ -53,6 +64,18 @@ const Footer = () => {
             <Typography sx={{ color: "red" }}>
               {"We're located here:"}
             </Typography>
+            <Link
+              href={"https://maps.app.goo.gl/YjwBtBdW4gZojfeA9"}
+              target="blank"
+              style={{
+                color: "white",
+                textDecoration: "none",
+              }}
+            >
+              <Typography sx={{ marginBottom: "10px" }}>
+                https://maps.app.goo.gl/YjwBtBdW4gZojfeA9
+              </Typography>
+            </Link>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d212.4481289248772!2d74.328044!3d31.574383999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b779a807a9d%3A0x2baacb944b2abe10!2sTAJ%20PUMP%20COMPANY!5e0!3m2!1sen!2sus!4v1714209333519!5m2!1sen!2sus"
               width="100%"

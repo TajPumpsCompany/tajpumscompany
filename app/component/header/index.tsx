@@ -15,19 +15,21 @@ import { styles } from "./styles";
 import ResponsiveHeader from "./responsiveHeader";
 import TajImage from "../TajImage";
 import { Link as ScrollLink } from "react-scroll";
+import HeaderLogo from "@/public/Logo.png";
 
 const Header = () => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <AppBar elevation={0} sx={{ backgroundColor: "black" }}>
       <Toolbar>
         <Container>
           <Grid container sx={styles.MainGrid}>
             <Grid item xs={2} sm={1} sx={styles.Logo}>
-              <Box sx={{ height: 50, width: "100%" }}>
+              <Box sx={{ height: 55, width: "100%", cursor: "pointer" }}>
                 <TajImage
-                  src={""}
+                  src={HeaderLogo}
                   alt="Header Logo"
                   style={{ objectFit: "contain" }}
                 />

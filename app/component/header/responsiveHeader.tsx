@@ -4,22 +4,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Box, Drawer, Grid, IconButton, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { styles } from "./styles";
-import { useRouter } from "next/navigation";
 import { HeaderData } from "@/app/static-data/data";
 import TajImage from "../TajImage";
 import { Link as ScrollLink } from "react-scroll";
+import HeaderLogo from "@/public/Logo.png";
 
 const ResponsiveHeader = () => {
-  const route = useRouter();
   const [opendrawer, setOpenDrawar] = useState(false);
   const onClickDrawer = () => {
     setOpenDrawar(true);
   };
   const onCloseDrawer = () => {
     setOpenDrawar(false);
-  };
-  const HomePageRoute = () => {
-    route.push("/");
   };
   return (
     <Box>
@@ -32,12 +28,21 @@ const ResponsiveHeader = () => {
         }}
       >
         <Box sx={styles.DrawarBox}>
-          <Box sx={{ height: 62, width: 150 }} onClick={HomePageRoute}>
-            <TajImage
-              src={""}
-              alt="Header Logo"
-              style={{ objectFit: "contain" }}
-            />
+          <Box sx={{ height: 55, width: 100 }}>
+            <ScrollLink
+              to={"banner"}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={onCloseDrawer}
+            >
+              <TajImage
+                src={HeaderLogo}
+                alt="Header Logo"
+                style={{ objectFit: "contain", cursor: "pointer" }}
+              />
+            </ScrollLink>
           </Box>
           <IconButton onClick={onCloseDrawer}>
             <CloseIcon

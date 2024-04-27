@@ -21,7 +21,7 @@ export const styles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: "15px 0px",
+    padding: "15px 15px 0px",
   },
   ResponsiveDataGrid: {
     borderBottom: "1px solid hsla(0,0%,100%,.09)",

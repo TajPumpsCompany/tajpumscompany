@@ -37,7 +37,7 @@ const Header = () => {
               <ResponsiveHeader />
             ) : (
               <Grid item xs={10} sm={11} sx={styles.HeaderList}>
-                {HeaderData.map((item: any) => {
+                {HeaderData.map((item: any, index: any) => {
                   return (
                     <ScrollLink
                       to={item.link}
@@ -45,6 +45,7 @@ const Header = () => {
                       smooth={true}
                       offset={-100}
                       duration={500}
+                      key={`${item?.id}-${index}`}
                     >
                       <Typography
                         sx={{ marginRight: "10px", cursor: "pointer" }}

@@ -50,9 +50,14 @@ const ResponsiveHeader = () => {
           </IconButton>
         </Box>
         <Grid container sx={{ display: "flex", justifyContent: "center" }}>
-          {HeaderData.map((item: any) => {
+          {HeaderData.map((item: any, index: any) => {
             return (
-              <Grid item xs={10} sx={styles.ResponsiveDataGrid}>
+              <Grid
+                item
+                xs={10}
+                sx={styles.ResponsiveDataGrid}
+                key={`${item?.id}-${index}`}
+              >
                 <ScrollLink
                   to={item.link}
                   spy={true}

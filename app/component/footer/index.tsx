@@ -21,9 +21,9 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} sm={10} sx={styles.FollowUs}>
             <Typography sx={{ color: "red" }}>Follow Us:</Typography>
-            {SocialIcons.map((item: any) => {
+            {SocialIcons.map((item: any, index: any) => {
               return (
-                <Box sx={{ marginLeft: "10px" }}>
+                <Box sx={{ marginLeft: "10px" }} key={`${item?.id}-${index}`}>
                   <Link
                     href={item.link}
                     target="blank"
@@ -50,13 +50,16 @@ const Footer = () => {
             })}
           </Grid>
           <Grid item xs={12}>
-            <Typography sx={{ color: "red" }}>We're located here:</Typography>
+            <Typography sx={{ color: "red" }}>
+              {"We're located here:"}
+            </Typography>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d212.4481289248772!2d74.328044!3d31.574383999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b779a807a9d%3A0x2baacb944b2abe10!2sTAJ%20PUMP%20COMPANY!5e0!3m2!1sen!2sus!4v1714209333519!5m2!1sen!2sus"
               width="100%"
               height="220px"
               style={{ border: 0 }}
               loading="lazy"
+              title="location"
             />
           </Grid>
           <Grid container item xs={12}>
@@ -65,9 +68,15 @@ const Footer = () => {
                 Get In Touch With Us:
               </Typography>
             </Grid>
-            {FooterNumber.map((item: any) => {
+            {FooterNumber.map((item: any, index: any) => {
               return (
-                <Grid item xs={6} sm={2} sx={styles.Numbers}>
+                <Grid
+                  item
+                  xs={6}
+                  sm={2}
+                  sx={styles.Numbers}
+                  key={`${item?.id}-${index}`}
+                >
                   <Link
                     href={item.link}
                     style={{

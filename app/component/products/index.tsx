@@ -26,9 +26,9 @@ const Products = () => {
               Products:
             </Typography>
           </Grid>
-          {Product_data.map((item: any) => {
+          {Product_data.map((item: any, index: any) => {
             return (
-              <Grid item xs={12} sm={5.8} lg={3.8}>
+              <Grid item xs={12} sm={5.8} lg={3.8} key={`${item?.id}-${index}`}>
                 <Card sx={styles.Card}>
                   <CardMedia
                     component="img"

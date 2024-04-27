@@ -19,10 +19,14 @@ const ProductGallery = () => {
               Our Product Gallery:
             </Typography>
           </Grid>
-          {ProductImage.map((item: any) => (
-            <Grid item xs={12} sm={5.8} md={3.8}>
+          {ProductImage.map((item: any, index: any) => (
+            <Grid item xs={12} sm={5.8} md={3.8} key={`${item?.id}-${index}`}>
               <Box sx={{ width: "100%", height: 250 }}>
-                <TajImage src={item.img} alt={item.title} />
+                <TajImage
+                  src={item.img}
+                  alt={item.title}
+                  style={{ objectFit: "cover" }}
+                />
               </Box>
             </Grid>
           ))}
